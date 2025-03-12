@@ -1,0 +1,5 @@
+/* Add this to your CSS file */
+.large-image {
+  width: 600px; /* Set your desired width */
+  height: auto; /* Maintain aspect ratio */
+}
