@@ -3,13 +3,13 @@ body, html {
     margin: 0;
     padding: 0;
     height: 100%;
-    overflow-x: hidden; /* Prevents scrolling */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 .home-container {
     position: relative;
-    height: 100vh; /* Full viewport height */
-    overflow: hidden; /* Ensures no scrolling */
+    min-height: 100vh; /* Use min-height to allow content expansion */
+    overflow: auto; /* Allow vertical scrolling */
 }
 
 .background-video {
@@ -18,23 +18,21 @@ body, html {
     left: 50%;
     width: 100vw;
     height: 100vh;
-    object-fit: cover; /* Ensures the video covers the entire background */
+    object-fit: cover;
     transform: translate(-50%, -50%);
-    z-index: -1; /* Places the video behind the content */
+    z-index: -1;
 }
 
 .content {
     position: relative;
-    z-index: 1; /* Places content above the video */
-    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background for readability */
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.8);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     max-width: 800px;
     margin: auto;
     text-align: center;
-    /*top: 50%;*/
-    /*transform: translateY(-50%); /* Vertically centers the content */ 
 }
 
 h1 {
@@ -99,13 +97,12 @@ h2 {
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     max-width: 800px;
-    margin: 40px auto; /* Center horizontally */
-    /*overflow: hidden; */
+    margin: 40px auto;
 }
 
 .large-image {
     flex: 1.5;
-    max-width: 500px; /* Control image size */
+    max-width: 500px;
     width: 100%;
     border-radius: 10px;
 }
@@ -127,11 +124,11 @@ h2 {
 
 @media (max-width: 768px) {
     .stone-detail-container {
-        flex-direction: column; /* Stack elements vertically on smaller screens */
+        flex-direction: column;
         align-items: center;
     }
 
     .large-image, .stone-info {
-        max-width: 90%; /* Adjust width to fit smaller screens */
+        max-width: 90%;
     }
 }
