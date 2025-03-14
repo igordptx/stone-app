@@ -1,7 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import './StoneDetail.css'; // Ensure this path is correct
+//import './StoneDetail.css'; // Ensure this path is correct
 
+import './ModernStyle.css'; // Ensure this path is correct
 const stones = [
   { id: 1, name: "Aquabella", image_url: "/images/Aquabella.jpeg" },
   { id: 2, name: "Branco piracema", image_url: "/images/Branco_piracema.jpeg" },
@@ -17,20 +18,46 @@ const stones = [
 
 function Home() {
   return (
-    <div>
-      <h1>Stone Collection</h1>
-      <ul>
-        {stones.map((stone) => (
-          <li key={stone.id}>
-            <Link to={`/stone/${stone.id}`}>
-            <img src={stone.image_url} alt={stone.name} width="100" />
-              <h2>{stone.name}</h2>
-            </Link>
-          </li>
-        ))}
-      </ul>
+    <div className="home-container">
+      <video autoPlay muted loop className="background-video">
+        <source src="/videos/nature.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <div className="content">
+        <h1>Stone Collection</h1>
+        <ul>
+          {stones.map((stone) => (
+            <li key={stone.id}>
+              <Link to={`/stone/${stone.id}`}>
+                <img src={stone.image_url} alt={stone.name} />
+                <h2>{stone.name}</h2>
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
   );
 }
 
 export default Home;
+
+// function Home() {
+  // return (
+    // <div>
+      // <h1>Stone Collection</h1>
+      // <ul>
+        // {stones.map((stone) => (
+          // <li key={stone.id}>
+            // <Link to={`/stone/${stone.id}`}>
+            // <img src={stone.image_url} alt={stone.name} width="100" />
+              // <h2>{stone.name}</h2>
+            // </Link>
+          // </li>
+        // ))}
+      // </ul>
+    // </div>
+  // );
+// }
+
+// export default Home;
