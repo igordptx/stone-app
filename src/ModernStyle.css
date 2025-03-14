@@ -33,8 +33,8 @@ body, html {
     max-width: 800px;
     margin: auto;
     text-align: center;
-    top: 50%;
-    transform: translateY(-50%); /* Vertically centers the content */
+    /*top: 50%;*/
+    /*transform: translateY(-50%); /* Vertically centers the content */ 
 }
 
 h1 {
@@ -100,7 +100,7 @@ h2 {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     max-width: 800px;
     margin: 40px auto; /* Center horizontally */
-    overflow: hidden;
+    /*overflow: hidden; */
 }
 
 .large-image {
