@@ -1,0 +1,124 @@
+/* modernStyles.css */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden; /* Prevents scrolling */
+}
+
+.home-container {
+    position: relative;
+    height: 100vh; /* Full viewport height */
+    overflow: hidden; /* Ensures no scrolling */
+}
+
+.background-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover; /* Ensures the video covers the entire background */
+    transform: translate(-50%, -50%);
+    z-index: -1; /* Places the video behind the content */
+}
+
+.content {
+    position: relative;
+    z-index: 1; /* Places content above the video */
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background for readability */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%); /* Vertically centers the content */
+}
+
+h1 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+li {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+    width: 160px;
+    text-align: center;
+}
+
+li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+img {
+    border-radius: 10px 10px 0 0;
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+    color: #34495e;
+}
+
+a:hover {
+    color: #2980b9;
+}
+
+h2 {
+    margin: 15px 0;
+    font-size: 18px;
+    color: #34495e;
+}
+
+.stone-detail-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    margin: 20px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 40px auto; /* Center horizontally */
+    overflow: hidden;
+}
+
+.large-image {
+    flex: 1.5;
+    max-width: 500px; /* Control image size */
+    border-radius: 10px;
+}
+
+.stone-info {
+    flex: 2;
+    max-width: 400px;
+}
+
+.stone-info h3 {
+    margin-top: 0;
+    font-size: 16px;
+    color: #2c3e50;
+}
+
+.stone-info p {
+    margin: 5px 0;
+}
